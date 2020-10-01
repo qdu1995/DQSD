@@ -1,14 +1,14 @@
 # DQSD Code
 
-Requirment
-
+Requirment:
+---------
 tensorflow<br>
 python3.6
 
 for train:
 ---------
-1.git clone CPFP-Resnet50.git<br>
-2.Download initial model and training data<br>
+1.git clone DQSD.git<br>
+2.Download initial model and training data<br> model [link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my) and [link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)
 3.python run.py<br>
 
 
