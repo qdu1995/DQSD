@@ -13,4 +13,4 @@ for test:
 3.python test.py<br>
 
 Result:
-NJDU[link](https://pan.baidu.com/s/1Z3RWcvK5wdrpz1Djwg9oVQ)||NLPR[link](https://pan.baidu.com/s/1LISbObS9kU-WR57S0Uvhqg)||EDS[link](https://pan.baidu.com/s/1PrusMnMzeggi0rE7QYEDDQ)||LFSD[link](https://pan.baidu.com/s/18WriavyVyZKQVvgDX-sx_Q)||SSD[link](https://pan.baidu.com/s/1APCT6HtwweeGXVRWNUwMOw)||STERE[link]||SIP[link]||
+NJDU [link](https://pan.baidu.com/s/1Z3RWcvK5wdrpz1Djwg9oVQ)||NLPR [link](https://pan.baidu.com/s/1LISbObS9kU-WR57S0Uvhqg)||EDS [link](https://pan.baidu.com/s/1PrusMnMzeggi0rE7QYEDDQ)||LFSD [link](https://pan.baidu.com/s/18WriavyVyZKQVvgDX-sx_Q)||SSD [link](https://pan.baidu.com/s/1APCT6HtwweeGXVRWNUwMOw)||STERE [link](https://pan.baidu.com/s/1EHtrAZIv3gheemhFcSDCUQ)||SIP[link]||
