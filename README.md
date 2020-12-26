@@ -2,12 +2,13 @@
 DQSD：Depth Quality Aware Salient Object Detection(Under review)<br>
 The network structure is as follows:
 
-Requirment:
+# Requirment
 ---------
 * tensorflow1.4<br>
 * python3.6<br>
 * keras2.1.2
 
+# Preparation
 for train:
 ---------
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
