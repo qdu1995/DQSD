@@ -16,9 +16,9 @@ The network structure is as follows:
 
 for train:
 ---------
-1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
-2.Download initial model and training data<br> model [link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my) and [link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)<br>
-3.python train.py<br>
+put the train dataset into the train folder.<br>
+Put the pretrained model into the 'model' folder.<br>
+python train.py<br>
 
 
 for test:
