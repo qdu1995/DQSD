@@ -11,7 +11,7 @@ The network structure is as follows:
 # Preparation<br>
 
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
-2.Download the official pre training weight Resnet or download initial model RGB stream,depth stream and DCA stream[link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my)[link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)[link](https://pan.baidu.com/s/1SZL4EPqojn0LQEtzd_lgKQ)(x8uo)<br>
+2.Download the official pre training weight Resnet or download initial model RGB stream,depth stream and DCA stream [link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my) [link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr) [link](https://pan.baidu.com/s/1SZL4EPqojn0LQEtzd_lgKQ)(x8uo)<br>
 3.download rgb-d dataset datasets in the folder of data for training or test.
 
 for train:
