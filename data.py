@@ -5,8 +5,8 @@ import random
 import matplotlib.pyplot as plt
 
 
-RGB_path = 'E:\\DATA2\\100\\RGB\\'#path
-deep_path = 'E:\\DATA2\\100\\depth\\';#path
+RGB_path = 'E\\RGB\\'#path
+deep_path = 'E:\\depth\\';#path
 
 datalist = open(RGB_path+'list.txt','r')
 namelist=[l.strip('\n') for l in datalist.readlines()]
@@ -47,6 +47,6 @@ for i in range(NumSample):
     X2[i,:,:,5]=d1[i,:,:]
 
 
-f = h5py.File('E:\\totalfeater\\test_100_6TD.h5','w')#path 
+f = h5py.File('E:\\.h5','w')#path 
 f['x'] = X2      
 f.close()
