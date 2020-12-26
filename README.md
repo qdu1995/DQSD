@@ -1,5 +1,6 @@
 # DQSD(TIP 2020)<br>
-DQSD：Depth Quality Aware Salient Object Detection
+DQSD：Depth Quality Aware Salient Object Detection(Under review)<br>
+The network structure is as follows:
 
 Requirment:
 ---------
