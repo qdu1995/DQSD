@@ -2,7 +2,7 @@
 Requirment:
 ---------
 tensorflow1.4<br>
-python3.6
+python3.6<br>
 keras2.1.2
 
 for train:
