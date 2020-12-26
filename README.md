@@ -24,7 +24,7 @@ for train:
 for test:
 ---------
 1.Download testing data, put the test dataset into the test folder<br>
-2.Download pretrained model[link](https://pan.baidu.com/s/1MnlBpnQw7UNrYP0dnmwdKg)(ul7e), put the model into the 'model' folder<br>
+2.Download pretrained model [link](https://pan.baidu.com/s/1MnlBpnQw7UNrYP0dnmwdKg)(ul7e), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
 Result:
@@ -33,7 +33,7 @@ NJDU [link](https://pan.baidu.com/s/1ZdQeaYOVu1twxlstHwQs_g)(rtza) || NLPR [link
 
 Evalution:
 ---------
-Download the evaluation indicators[link](https://pan.baidu.com/s/1mk7KcpIOf_OXscVCW4kPuQ)(vhfc).Thanks for the authors (http://dpfan.net/) and [PDnet](https://github.com/cai199626/PDNet)<br>
+Download the evaluation indicators [link](https://pan.baidu.com/s/1mk7KcpIOf_OXscVCW4kPuQ)(vhfc).Thanks for the authors (http://dpfan.net/) and [PDnet](https://github.com/cai199626/PDNet)<br>
 
 If you think this work is helpful, please cite:
 @article{
