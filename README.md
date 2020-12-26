@@ -9,9 +9,11 @@ The network structure is as follows:
 * keras2.1.2
 
 # Preparation<br>
+
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
 2.Download the official pre training weight Resnet or download initial model<br> RGB stream,depth stream and DCA stream[link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my)[link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)<br>
 3.download or put the RGB-D saliency benchmark datasets (Google drive) in the folder of data for training or test.
+
 for train:
 ---------
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
