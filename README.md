@@ -24,7 +24,7 @@ for train:
 for test:
 ---------
 1.Download testing data, put the test dataset into the test folder<br>
-2.Download pretrained model [link](https://pan.baidu.com/s/1MnlBpnQw7UNrYP0dnmwdKg)(ul7e), put the model into the 'model' folder<br>
+2.Download pretrained model [link](https://pan.baidu.com/s/1HpDPYcjIimngkwKpAJvICA)(5s17), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
 Result:
