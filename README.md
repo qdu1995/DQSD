@@ -1,9 +1,9 @@
 # DQSD Code
-
 Requirment:
 ---------
-tensorflow<br>
+tensorflow1.4<br>
 python3.6
+keras2.1.2
 
 for train:
 ---------
