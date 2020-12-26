@@ -12,7 +12,7 @@ from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 #os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 ###############################################################################
 def load():    
-    f = h5py.File('\\test_100.h5','r')   
+    f = h5py.File('','r')   
     f.keys()
     X = f['x'][:]
     f.close()
@@ -27,13 +27,13 @@ print (deep.shape)
 img_width,  img_height = 224,224 
 
 model = net(img_width,img_height)
-model.load_weights('',by_name=False)
+model.load_weights('C:net.hdf5',by_name=False)
 
 img_pre=model.predict([image,deep],batch_size=4, verbose=1)
 for i in range(img_pre.shape[0]):
     img = img_pre[i]
     img = array_to_img(img)
-    img.save("\\%d.jpg"%(1+i))
+    img.save("result\\%d.jpg"%(1+i))
     
 #print(img_pre[i])
 
