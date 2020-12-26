@@ -1,4 +1,8 @@
 # DQSD Code
+===
+DQSD(TIP 2020)<br>
+Depth Quality Aware Salient Object Detection
+
 Requirment:
 ---------
 tensorflow1.4<br>
