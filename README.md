@@ -1,20 +1,20 @@
 # DQSD(TIP 2020)<br>
 DQSD：Depth Quality Aware Salient Object Detection
 
-##Requirment:
+Requirment:
 ---------
-tensorflow1.4<br>
-python3.6<br>
-keras2.1.2
+* tensorflow1.4<br>
+* python3.6<br>
+* keras2.1.2
 
-##for train:
+for train:
 ---------
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
 2.Download initial model and training data<br> model [link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my) and [link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)<br>
 3.python train.py<br>
 
 
-##for test:
+for test:
 ---------
 1.Download testing data<br>
 2.Download pretrained model
