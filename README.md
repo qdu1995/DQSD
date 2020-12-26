@@ -9,6 +9,8 @@ The network structure is as follows:
 * keras2.1.2
 
 # Preparation
+1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
+2.Download the official pre training weight Resnet or download initial model<br> RGB stream,depth stream and DCA stream[link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my)[link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr)<br>
 for train:
 ---------
 1.clone code by clone git https://github.com/qdu1995/DQSD.git<br>
@@ -19,7 +21,7 @@ for train:
 for test:
 ---------
 1.Download testing data<br>
-2.Download pretrained model
+2.Download pretrained model<br>
 3.python demo.py<br>
 
 Result:
