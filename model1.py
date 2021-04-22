@@ -452,11 +452,6 @@ def model(img_width,img_height):
     weight8 = Lambda(lambda x:(1.0-x))(W)
     weight8 = Multiply()([conv10_2,weight8])
     ADD4 = Add()([weight7,weight8])###224
-    #weight_7 = Lambda(lambda x:x*W)
-    #weight_8 = Lambda(lambda x:x*(1.0-W))
-    #weight_gru7 = weight_7(convj_2)
-    #weight_gru8 = weight_8(conv10_2)
-    #ADD4 = Add()([weight_gru7,weight_gru8])###224
 ###############################################################################
     upADD1=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(ADD1)##,name='uppoolADD1'
     fuse6=concatenate([upADD1,ADD2])
