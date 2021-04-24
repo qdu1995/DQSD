@@ -6,12 +6,11 @@ The network structure is as follows:
 ---------
 * tensorflow1.4<br>
 * python3.6<br>
-* keras2.1.2
 
 # Preparation<br>
 
 1.Clone code by clone git https://github.com/qdu1995/DQSD.git<br>
-2.Download the official pre training weight Resnet or download initial model RGB stream,depth stream and DCA stream [link](https://pan.baidu.com/s/1E_eLNXN9l2mlpDxXdlohng)(89my) [link](https://pan.baidu.com/s/1wOXJD3mENKOgWok72ghYIQ)(3ftr) [link](https://pan.baidu.com/s/1SZL4EPqojn0LQEtzd_lgKQ)(x8uo)<br>
+2.Download the official pre training weight Resnet or download initial model [link](https://pan.baidu.com/s/1q1Aw7J2l6XCqIGGBBu9HHA)(jsf8)<br>
 3.Download rgb-d dataset datasets in the folder of data for training or test.
 
 for train:
