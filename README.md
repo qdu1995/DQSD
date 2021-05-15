@@ -23,7 +23,7 @@ for train:
 for test:
 ---------
 1.Download testing data, put the test dataset into the test folder<br>
-2.Download pretrained model [link](https://pan.baidu.com/s/1sBXwplyNeNlqUjL-QRvppQ)(1nrn), put the model into the 'model' folder<br>
+2.Download pretrained model [link](https://pan.baidu.com/s/1FcWv9t9qoEC9ZLxj-B-7Ig)(0vo7), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
 Result:
