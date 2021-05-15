@@ -10,7 +10,7 @@ The network structure is as follows:
 # Preparation<br>
 
 1.Clone code by clone git https://github.com/qdu1995/DQSD.git<br>
-2.Download the official pre training weight Resnet or download initial model [link](https://pan.baidu.com/s/1q1Aw7J2l6XCqIGGBBu9HHA)(jsf8)<br>
+2.Download the official pre training weight Resnet or download initial model [link](https://pan.baidu.com/s/1JnmH4uoRMvQoer9YzQ1pxA)(jsf8)<br>
 3.Download rgb-d dataset datasets in the folder of data for training or test.
 
 for train:
