@@ -145,13 +145,7 @@ def model(img_width,img_height):
     convf_1 = Conv2D(512, (3, 3),   padding='same', name='block_f1')(conve_3)
     convf_1 = BatchNormalization(name='batch_f1')(convf_1)
     convf_1 = Activation('relu')(convf_1)
-    convf_2 = Conv2D(512, (3, 3),   padding='same', name='block_f2')(convf_1)
-    convf_2 = BatchNormalization(name='batch_f2')(convf_2)
-    convf_2 = Activation('relu')(convf_2)
-    convf_3 = Conv2D(512, (3, 3),   padding='same', name='block_f3')(convf_2)
-    convf_3 = BatchNormalization(name='batch_f3')(convf_3)
-    convf_3 = Activation('relu')(convf_3)
-    uppoolf=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convf_3)
+    uppoolf=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convf_1)
 
     #cross 1 g
     g = concatenate([convd_4,uppoolf],axis=-1)
@@ -161,12 +155,9 @@ def model(img_width,img_height):
     convg_2 = Conv2D(512, (3, 3),   padding='same', name='block_g2')(convg_1)
     convg_2 = BatchNormalization(name='batch_g2')(convg_2)
     convg_2 = Activation('relu')(convg_2)
-    convg_3 = Conv2D(512, (3, 3),   padding='same', name='block_g3')(convg_2)
-    convg_3 = BatchNormalization(name='batch_g3')(convg_3)
-    convg_3 = Activation('relu')(convg_3)
     
-    uppoolg=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convg_3)
-    convg_4 = Conv2D(64, (3, 3),   padding='same', name='block_g4',kernel_initializer='TruncatedNormal')(convg_3)
+    uppoolg=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convg_2)
+    convg_4 = Conv2D(64, (3, 3),   padding='same', name='block_g4')(convg_2)
     convg_4 = BatchNormalization(name='batch_g4')(convg_4)
     convg_4 = Activation('relu')(convg_4)
     
@@ -180,7 +171,7 @@ def model(img_width,img_height):
     convh_2 = Activation('relu')(convh_2)
     
     uppoolh=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convh_2)  
-    convh_3 = Conv2D(64, (3, 3),   padding='same', name='block_h3',kernel_initializer='TruncatedNormal')(convh_2)
+    convh_3 = Conv2D(64, (3, 3),   padding='same', name='block_h3')(convh_2)
     convh_3 = BatchNormalization(name='batch_h3')(convh_3)
     convh_3 = Activation('relu')(convh_3)
     
@@ -194,7 +185,7 @@ def model(img_width,img_height):
     convi_2 = Activation('relu')(convi_2)
 
     uppooli=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convi_2)
-    convi_3 = Conv2D(64, (3, 3),   padding='same', name='block_i3',kernel_initializer='TruncatedNormal')(convi_2)
+    convi_3 = Conv2D(64, (3, 3),   padding='same', name='block_i3')(convi_2)
     convi_3 = BatchNormalization(name='batch_i3')(convi_3)
     convi_3 = Activation('relu')(convi_3)
     
@@ -206,8 +197,7 @@ def model(img_width,img_height):
     convj_2 = Conv2D(64, (3, 3),   padding='same', name='block_j2')(convj_1)
     convj_2 = BatchNormalization(name='batch_j2')(convj_2)
     convj_2 = Activation('relu')(convj_2)
-###############################################################################
-###############################################################################depthzy
+    
     RGBDep=concatenate([inputs,input_depth],axis=-1)
     convk_1 = Conv2D(64, (3, 3), padding='same',name='block_k1')(RGBDep)
     convk_1 = BatchNormalization(name='batch_k1')(convk_1)
@@ -225,7 +215,9 @@ def model(img_width,img_height):
     convl_2 = BatchNormalization(name='batch_l2')(convl_2)
     convl_2 = Activation('relu')(convl_2)
     maxpooll = MaxPooling2D((2, 2), strides=(2, 2))(convl_2)
-
+    convl_3 = Conv2D(64, (3, 3), padding='same', name='block_l3')(convl_2)
+    convl_3 = BatchNormalization(name='batch_l3')(convl_3)
+    convl_3 = Activation('relu')(convl_3)
     # Block c
     convm_1 = Conv2D(256, (3, 3), padding='same',  name='block_m1')(maxpooll)
     convm_1 = BatchNormalization(name='batch_m1')(convm_1)
@@ -236,11 +228,11 @@ def model(img_width,img_height):
     convm_3 = Conv2D(256, (3, 3), padding='same', name='block_m3')(convm_2)
     convm_3 = BatchNormalization(name='batch_m3')(convm_3)
     convm_3 = Activation('relu')(convm_3)
-    convm_4 = Conv2D(256, (3, 3), padding='same', name='block_m4')(convm_3)
+    maxpoolm = MaxPooling2D((2, 2),strides=(2, 2))(convm_3)
+    convm_4 = Conv2D(64, (3, 3), padding='same', name='block_m4')(convm_3)
     convm_4 = BatchNormalization(name='batch_m4')(convm_4)
     convm_4 = Activation('relu')(convm_4)
-    maxpoolm = MaxPooling2D((2, 2),strides=(2, 2))(convm_4)
-
+    
     # Block d
     convn_1 = Conv2D(512, (3, 3), padding='same', name='block_n1')(maxpoolm)
     convn_1 = BatchNormalization(name='batch_n1')(convn_1)
@@ -251,11 +243,10 @@ def model(img_width,img_height):
     convn_3 = Conv2D(512, (3, 3), padding='same', name='block_n3')(convn_2)
     convn_3 = BatchNormalization(name='batch_n3')(convn_3)
     convn_3 = Activation('relu')(convn_3)
-    convn_4 = Conv2D(512, (3, 3), padding='same', name='block_n4')(convn_3)
+    maxpooln = MaxPooling2D((2, 2), strides=(2, 2))(convn_3)
+    convn_4 = Conv2D(64, (3, 3), padding='same', name='block_n4')(convn_3)
     convn_4 = BatchNormalization(name='batch_n4')(convn_4)
     convn_4 = Activation('relu')(convn_4)
-    maxpooln = MaxPooling2D((2, 2), strides=(2, 2))(convn_4)
-
     # Block 5
     convo_1 = Conv2D(512, (3, 3),   padding='same',name='block_o1')(maxpooln)
     convo_1 = BatchNormalization(name='batch_o1')(convo_1)
@@ -271,13 +262,7 @@ def model(img_width,img_height):
     convp_1 = Conv2D(512, (3, 3),   padding='same', name='block_p1')(convo_3)
     convp_1 = BatchNormalization(name='batch_p1')(convp_1)
     convp_1 = Activation('relu')(convp_1)
-    convp_2 = Conv2D(512, (3, 3),   padding='same', name='block_p2')(convp_1)
-    convp_2 = BatchNormalization(name='batch_p2')(convp_2)
-    convp_2 = Activation('relu')(convp_2)
-    convp_3 = Conv2D(512, (3, 3),   padding='same', name='block_p3')(convp_2)
-    convp_3 = BatchNormalization(name='batch_p3')(convp_3)
-    convp_3 = Activation('relu')(convp_3)
-    uppoolp=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convp_3)
+    uppoolp=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(convp_1)
 
     #cross 1 g
     q = concatenate([convn_4,uppoolp],axis=-1)
@@ -287,7 +272,7 @@ def model(img_width,img_height):
     convq_2 = Conv2D(512, (3, 3),   padding='same', name='block_q2')(convq_1)
     convq_2 = BatchNormalization(name='batch_q2')(convq_2)
     convq_2 = Activation('relu')(convq_2)
-    convq_3 = Conv2D(512, (3, 3),   padding='same', name='block_q3')(convq_2)
+    convq_3 = Conv2D(64, (3, 3),   padding='same', name='block_q3')(convq_2)
     convq_3 = BatchNormalization(name='batch_q3')(convq_3)
     convq_3 = Activation('relu')(convq_3)
     
@@ -300,7 +285,7 @@ def model(img_width,img_height):
     convr_1 = Conv2D(256, (3, 3),   padding='same',name='block_r1')(r)
     convr_1 = BatchNormalization(name='batch_r1')(convr_1)
     convr_1 = Activation('relu')(convr_1)
-    convr_2 = Conv2D(256, (3, 3),   padding='same', name='block_r2')(convr_1)
+    convr_2 = Conv2D(64, (3, 3),   padding='same', name='block_r2')(convr_1)
     convr_2 = BatchNormalization(name='batch_r2')(convr_2)
     convr_2 = Activation('relu')(convr_2)
     
@@ -309,11 +294,11 @@ def model(img_width,img_height):
     outr=Conv2D(1, (3, 3),padding='same',name='outr')(uppoolr1)
     
     #cross 3
-    s = concatenate([convl_2,uppoolr],axis=-1)
+    s = concatenate([convl_3,uppoolr],axis=-1)
     convs_1 = Conv2D(128, (3, 3),   padding='same', name='block_s1')(s)
     convs_1 = BatchNormalization(name='batch_s1')(convs_1)
     convs_1 = Activation('relu')(convs_1)
-    convs_2 = Conv2D(128, (3, 3),   padding='same', name='block_s2')(convs_1)
+    convs_2 = Conv2D(64, (3, 3),   padding='same', name='block_s2')(convs_1)
     convs_2 = BatchNormalization(name='batch_s2')(convs_2)
     convs_2 = Activation('relu')(convs_2)
 
@@ -452,7 +437,7 @@ def model(img_width,img_height):
     weight8 = Lambda(lambda x:(1.0-x))(W)
     weight8 = Multiply()([conv10_2,weight8])
     ADD4 = Add()([weight7,weight8])###224
-###############################################################################
+
     upADD1=UpSampling2D(size=(2, 2), data_format=K.image_data_format())(ADD1)##,name='uppoolADD1'
     fuse6=concatenate([upADD1,ADD2])
     ###########################################################################
