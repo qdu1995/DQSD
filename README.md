@@ -22,13 +22,13 @@ for train:
 
 for test:
 ---------
-1.Download testing data[link]()(), put the test dataset into the test folder<br>
+1.Download testing data[link](https://pan.baidu.com/s/15KWcIAbEzKQt-N6mPeERpg)(cdky), put the test dataset into the test folder<br>
 2.Download pretrained model [link](https://pan.baidu.com/s/1FcWv9t9qoEC9ZLxj-B-7Ig)(0vo7), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
 Result:
 ---------
-data [link](https://pan.baidu.com/s/1s_7zyAp2qxz6EwLQ7CA-ww)(j4iz)
+data [link](https://pan.baidu.com/s/1jRuZqVBRwcjQ2jQ7Mq9SSg)(j4iz)
 
 Evalution:
 ---------
