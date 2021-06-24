@@ -18,11 +18,11 @@ for train:
 1.Put the train dataset into the train folder.<br>
 2.Put the pretrained model into the 'model' folder.<br>
 3.python train.py<br>
-
+data[link](https://pan.baidu.com/s/15KWcIAbEzKQt-N6mPeERpg)(cdky)
 
 for test:
 ---------
-1.Download testing data[link](https://pan.baidu.com/s/15KWcIAbEzKQt-N6mPeERpg)(cdky), put the test dataset into the test folder<br>
+1.Download testing data, put the test dataset into the test folder<br>
 2.Download pretrained model [link](https://pan.baidu.com/s/1FcWv9t9qoEC9ZLxj-B-7Ig)(0vo7), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
