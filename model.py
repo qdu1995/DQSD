@@ -304,7 +304,7 @@ def net(img_width,img_height):
     convt_2 = Conv2D(64, (3, 3),   padding='same', name='block_t2')(convt_1)
     convt_2 = BatchNormalization(name='batch_t2')(convt_2)
     convt_2 = Activation('relu')(convt_2)
-    W=Conv2D(1, (3, 3),padding='same',name='W',activation='sigmoid')(convt_2)
+    W=Conv2D(1, (3, 3),padding='same',activation='sigmoid')(convt_2)
 ###############################################################################
     fuse1=concatenate([conv5_3,conve_3])
     #fuse conv
@@ -465,7 +465,7 @@ def net(img_width,img_height):
     conv_11 = BatchNormalization()(conv_11)
     conv_11 = Activation('relu')(conv_11)
     
-    output=Conv2D(1, (3, 3),padding='same',name='output',activation='sigmoid')(conv_11)
+    output=Conv2D(1, (3, 3),padding='same',activation='sigmoid')(conv_11)
     model = Model(inputs = [inputs,input_depth], outputs = output)
 
     adam1=keras.optimizers.Adam(lr=0.0002, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
