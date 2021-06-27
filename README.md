@@ -23,7 +23,7 @@ data[link](https://pan.baidu.com/s/15KWcIAbEzKQt-N6mPeERpg)(cdky)
 for test:
 ---------
 1.Download testing data, put the test dataset into the test folder<br>
-2.Download pretrained model [link](https://pan.baidu.com/s/1FGJFc3TsS039D55tFEhlsw)(0vo7), put the model into the 'model' folder<br>
+2.Download pretrained model [link](https://pan.baidu.com/s/11e2lr0HWMb8xZk9DUGlXzw)(0vo7), put the model into the 'model' folder<br>
 3.python demo.py<br>
 
 Result:
