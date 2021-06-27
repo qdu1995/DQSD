@@ -419,6 +419,8 @@ def net(img_width,img_height):
     w112 = tf.image.resize_images(W,[112, 112])
     weight5 = Lambda(lambda x:x*w112)(convi_3)
     weight6 = Lambda(lambda x:x*(1.0-w112))(conv9_2)
+    #########################################################################
+    #########################################################################
     ADD3 = Add()([weight5,weight6])
     
     weight7 = Multiply()([convj_2,W])
